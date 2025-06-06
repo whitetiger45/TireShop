@@ -5,6 +5,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.annotation.web.configurers.LogoutConfigurer;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.User.UserBuilder;
 
@@ -27,7 +28,6 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-
 		http.authorizeRequests()
 		.antMatchers("/css/**","/images/**").permitAll()
         .anyRequest().authenticated()
@@ -35,8 +35,13 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 			.formLogin()
 				.loginPage("/Login")
 				.loginProcessingUrl("/authenticateTheUser")
-				.permitAll();
-		
+				.permitAll()
+			.and()
+			.logout();
+//			.logout((logout) -> 
+//				logout.d.logoutUrl("/logout")
+//					.logoutSuccessUrl("/Login")
+//			);		
 	}
 		
 }

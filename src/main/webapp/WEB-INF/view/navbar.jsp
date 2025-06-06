@@ -39,13 +39,16 @@
                 </li>
                 <li class="nav-item">
                 	<a class="nav-link text-dark text-capitalize font-weight-bold px-3" href="${pageContext.request.contextPath }/Rimes">rimes</a>
-                	</li>
+            	</li>
                 <li class="nav-item">
                 	<a class="nav-link text-dark text-capitalize font-weight-bold px-3" href="${pageContext.request.contextPath }/Sales">sales</a>
-                	</li>
+            	</li>
                 <li class="nav-item">
                 	<a class="nav-link text-dark text-capitalize font-weight-bold px-3" href="${pageContext.request.contextPath }/Budget">budget</a>
-                	</li>
+            	</li>
+				<li class="nav-item">
+                	<a class="nav-link text-dark text-capitalize font-weight-bold px-3" href="${pageContext.request.contextPath }/Logout">logout</a>
+            	</li>
             </ul>
 
          </div>
