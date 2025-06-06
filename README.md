@@ -30,7 +30,7 @@
 * Top Sales Product 
 * Top Refill Product
 
-![Image of Home](https://raw.githubusercontent.com/ahmedJamaal/Tire-shop/master/ScreenShot/Screenshot_2020-03-06%20Home.png)
+![Image of Home](ScreenShot/home.png)
 
 # Project Version 
 ### poem.xml
